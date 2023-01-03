@@ -18,6 +18,10 @@ function App() {
           Learn React
         </a>
       </header>
+      <footer>
+      <a href="https://github.com/NastasiaKarpenko/project-weather-react-app" target="_blank" rel="noopener noreferrer">Open-source code,</a> by{" "}
+    <a href="https://fantastic-banoffee-9a9f78.netlify.app/" target="_blank" rel="noopener noreferrer">Anastasiia Kovalenko</a>
+    </footer>
     </div>
   );
 }

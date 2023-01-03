@@ -1,0 +1,27 @@
+body {
+  font-family: sans-serif;
+}
+
+.weather-app-wrapper {
+  max-width: 700px;
+  margin: 40px auto;
+}
+
+#namedCity {
+  display: flex;
+}
+.col {
+  padding: 10px 10px;
+}
+
+#currentPosition {
+  display: flex;
+}
+.btn-current {
+  margin: 0px auto 5px;
+  color: #ec6e4b;
+  border-color: #ec6e4b;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
