@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Cities from "./Cities";
+import App from "./App";
 import SearchEngine from "./SearchEngine";
 import CityForecast from "./CityForecast";
 import FiveMoreDays from "./FiveMoreDays";
@@ -22,7 +21,7 @@ root.render(
             <div className="card-body">
               <div className="row">
                 <div className="col-9">
-                  <Cities />
+                  <App />
                   <SearchEngine />
                   <CityForecast />
                 </div>
@@ -32,12 +31,12 @@ root.render(
             </div>
           </div>
           <div id="signature">
-            <small>
-              <a href="https://github.com/NastasiaKarpenko/Weather_app">
-                Open-source code
-              </a>
-              , by Anastasiia Kovalenko
-            </small>
+            
+            <footer><small>
+      <a href="https://github.com/NastasiaKarpenko/project-weather-react-app" target="_blank" rel="noopener noreferrer">Open-source code,</a> by{" "}
+    <a href="https://fantastic-banoffee-9a9f78.netlify.app/" target="_blank" rel="noopener noreferrer">Anastasiia Kovalenko</a>
+    </small></footer>
+            
           </div>
         </div>
       </div>

@@ -1,29 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <div className="row" id="namedCity">
+      <div className="col">
+        <a href="/" data-value="Irpin">
+          Irpin
         </a>
-      </header>
-      <footer>
-      <a href="https://github.com/NastasiaKarpenko/project-weather-react-app" target="_blank" rel="noopener noreferrer">Open-source code,</a> by{" "}
-    <a href="https://fantastic-banoffee-9a9f78.netlify.app/" target="_blank" rel="noopener noreferrer">Anastasiia Kovalenko</a>
-    </footer>
+      </div>
+      <div className="col">
+        <a href="/" data-value="Krakow">
+          Krakow
+        </a>
+      </div>
+      <div className="col">
+        <a href="/" data-value="Eindhoven">
+          Eindhoven
+        </a>
+      </div>
+      <div className="col">
+        <a href="/" data-value="Sofia">
+          Sofia
+        </a>
+      </div>
+      <div className="col">
+        <a href="/" data-value="Drogheda">
+          Drogheda
+        </a>
+      </div>
+
+      <button type="button" className="btn-current" id="currentPosition">
+        Current
+      </button>
     </div>
   );
 }
-
-export default App;
