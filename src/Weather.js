@@ -42,7 +42,7 @@ export default function Weather(){
             </div>
             <div className="row">
                  <div className="col-4">
-                     <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" />
+                     <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="weather-icon"/>
                      <strong className="temperature">-3</strong>1
                      <span className="units">
               <a href="/" id="celsius-link">°C</a> |
@@ -64,7 +64,7 @@ export default function Weather(){
         <div claasName="col-2">
             <div className="row">
                 <div className="col">
-                <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"/> Thu 18°12°
+                <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="weather-icon"/> Thu 18°12°
                 </div>
             </div>
         </div>
