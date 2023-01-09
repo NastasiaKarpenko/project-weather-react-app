@@ -14,7 +14,7 @@ setWeatherData({
     temp:response.data.main.temp,
     wind:response.data.wind.speed,
     city:response.data.name,
-    data:"Wensday 7:00",
+    date: new Date(response.data.dt*1000),
     description: response.data.weather[0].description,
     icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     humidity:response.data.main.humidity,
@@ -24,8 +24,6 @@ setWeatherData({
 }
 
 if (weatherData.ready){
-    
-
 
     return(
 <div className="Weather">
@@ -61,7 +59,9 @@ if (weatherData.ready){
             </div>
             <div className="row">
                 <h2>{weatherData.city}</h2>
-                <p>Last updated: <span className="current-date">{weatherData.date}</span></p>
+                <p>Last updated: <span className="current-date">
+                    <FormatDate date={weatherData.date}/>
+                    </span></p>
             </div>
             <div className="row">
                  <div className="col-5">
@@ -99,8 +99,8 @@ if (weatherData.ready){
 }else{
     const apiKey="fdaeb70f86d9811e4917af5701e5fdf2";
     let unit="metric";
-    let urlApi=`https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=&${unit}`;
-    axios.get(urlApi).than(handleSubmit);
+    let urlApi=`https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=${unit}`;
+    axios.get(urlApi).then(handleSubmit);
 
     return "loading";
 
