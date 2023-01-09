@@ -6,7 +6,7 @@ import "./App.css";
 export default function App() {
   return (
     <div className="App container">
-      <Weather />
+      <Weather defaultCity="Kyiv"/>
       <footer>
               <small> This project was coded by {" "}
                 <a href="https://fantastic-banoffee-9a9f78.netlify.app/" 
