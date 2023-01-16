@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo" ;
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -13,6 +14,7 @@ export default function Weather(props){
     function handleSubmit(response){
         setWeatherData({
             ready: true,
+            coordinates: response.data.coord,
             temp:response.data.main.temp,
             wind:response.data.wind.speed,
             city:response.data.name,
@@ -81,11 +83,7 @@ if (weatherData.ready){
         </div>
     
         <div className="col-3">
-            <div className="row">
-                <div className="col">
-                <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="weather-icon"/> Thu 18°12°
-                </div>
-            </div>
+           <WeatherForecast data={weatherData}/>
         </div>
     </div>
 </div>
