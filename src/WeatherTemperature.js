@@ -19,7 +19,7 @@ function ShowCelsius(event){
 if (unit === "celsius") {
     return(
         <div className="WeatherTemperature">
-         <strong className="temperature float-left">{Math.round(props.celsius)}</strong>
+         <strong className="temperature">{Math.round(props.celsius)}</strong>
             <span className="unit">
                    °C |
                    <a href="/" className="fahrenheit-link" onClick={ShowFahrenheit}>°F</a>
@@ -30,7 +30,7 @@ if (unit === "celsius") {
 
 return(
    <div className="WeatherTemperature">
-       <strong className="temperature float-left">{Math.round(fahrenheit())}</strong>
+       <strong className="temperature">{Math.round(fahrenheit())}</strong>
        <span className="unit">
         <a href="/" className="celsius-link" onClick={ShowCelsius}>°C</a> |°F
         </span>
