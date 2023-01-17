@@ -2,8 +2,9 @@
     text-align: left;
 }
 
-.WeatherForecast img {
-    height: 50px;
+.WeatherForecast canvas {
+    height: 20px;
+    margin: 10px 5px 0;
 }
 
 .WeatherForecast .weatherForecast-max-temp{
