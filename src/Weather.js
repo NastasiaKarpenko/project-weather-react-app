@@ -33,12 +33,18 @@ export default function Weather(props){
 
     function showInfoForCity(event){
     event.preventDefault();
-    search();
+    if (city.length > 2) {
+        search();
+      } else {
+        alert("Enter a city");
+      }
     }
 
 function handleCityChange(event){
-setCity(event.target.value);
-}
+        setCity(event.target.value);
+    }
+
+
 
 if (weatherData.ready){
 
@@ -47,34 +53,17 @@ if (weatherData.ready){
     <div className="row">
         <div className="col-9">
             <div className="row">
-                <div className="col-9 cities">
-                    <a href="/" data-value="Irpin">Irpin</a>
-                    <a href="/" data-value="Krakow">Krakow</a>
-                    <a href="/" data-value="Eindhoven">Eindhoven</a>
-                    <a href="/" data-value="Sofia">Sofia</a>
-                    <a href="/" data-value="Drogheda">Drogheda</a>
-                </div>
-                <div className="col-3">
-                    <button className="btn btn-outline-warning shadow-sm w-100">
-                        Current
-                    </button>
-
-                </div>
-            </div>
-            <div className="row">
-                <div className="col-9 mt-2">
-                    <form onSubmit={showInfoForCity}>
+                <div className="col nput-group ">
+                   <form onSubmit={showInfoForCity}>
                    <input type="search" 
                    placeholder="Type a city..." 
                     className="form-control shadow-sm"
                     autoFocus="on"
                     onChange={handleCityChange}/>
+                    <input type="submit" 
+                    value="Search" 
+                    className="btn ms-4 btn-outline-warning shadow-sm" />
                     </form>
-                </div>
-                <div className="col-3">
-                    <button className="btn btn-warning w-100 mt-2 shadow-sm">
-                        Search
-                    </button>
                 </div>
             </div>
             <WeatherInfo data={weatherData}/>
